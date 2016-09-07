@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CS317_project.Teacher.teacherscore"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CS317_project.Teacher"
+             mc:Ignorable="d" 
+           d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.Background x:Uid="main">
+            <ImageBrush ImageSource="/CS317_project;component/img/bg.jpg"/>
+        </Grid.Background>
+        <Button x:Name="bttnexit" Content="Exit" HorizontalAlignment="Left" Margin="507,10,0,0" VerticalAlignment="Top" Width="75" Click="bttnexit_Click"/>
+        <ListView x:Name="lstView_student" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="536" Margin="33,58,0,0" >
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}" />
+                    <GridViewColumn Header=" Quiz # " DisplayMemberBinding="{Binding quiznum}"/>
+                    <GridViewColumn Header=" Question " DisplayMemberBinding="{Binding question}"/>
+                    <GridViewColumn Header=" Studnet Answer" DisplayMemberBinding="{Binding Studentan}"/>
+                    <GridViewColumn Header=" Correct Answer" DisplayMemberBinding="{Binding correctan}"/>
+                    <GridViewColumn Header="Score" DisplayMemberBinding="{Binding score}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+            
+    </Grid>
+</UserControl>
